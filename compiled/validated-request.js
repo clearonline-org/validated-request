@@ -9,6 +9,7 @@
 */
 "use strict";
 var get_1 = require("./validated/get");
+var post_1 = require("./validated/post");
 var ValidatedRequest = (function () {
     function ValidatedRequest(protocol) {
         var _this = this;
@@ -18,6 +19,9 @@ var ValidatedRequest = (function () {
             switch (method) {
                 case 'GET':
                     _this.validatedGet = new get_1.ValidatedGet(method, param, query, body);
+                    break;
+                case 'POST':
+                    _this.validatedPost = new post_1.ValidatedPost(method, param, query, body);
                     break;
                 default:
                     break;
@@ -35,6 +39,9 @@ var ValidatedRequest = (function () {
     };
     ValidatedRequest.prototype.get = function (url, headers) {
         return this.validatedGet.get(url, headers);
+    };
+    ValidatedRequest.prototype.post = function (url, headers, body) {
+        return this.validatedPost.post(url, headers, body);
     };
     return ValidatedRequest;
 }());

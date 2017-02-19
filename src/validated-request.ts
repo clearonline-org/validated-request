@@ -9,10 +9,12 @@
 */
 
 import { ValidatedGet } from './validated/get';
+import { ValidatedPost } from './validated/post';
 
 export class ValidatedRequest {
 
     private validatedGet: any;
+    private validatedPost: any;
 
     public static staticGet(url: string, headers: { [key: string]: string }): Promise<any> {
         return Promise.reject({ message: 'NOT Implemented' });
@@ -33,6 +35,9 @@ export class ValidatedRequest {
                 case 'GET':
                     this.validatedGet = new ValidatedGet(method, param, query, body);
                     break;
+                case 'POST':
+                    this.validatedPost = new ValidatedPost(method, param, query, body);
+                    break;
             
                 default:
                     break;
@@ -45,4 +50,11 @@ export class ValidatedRequest {
         Promise<{ response: any, body?: any, error?: any }> {
         return this.validatedGet.get(url, headers);
     }
+
+
+    public post(url: string, headers: { [key: string]: string }, body: JSON): 
+        Promise<{ response: any, body?: any, error?: any }> {
+        return this.validatedPost.post(url, headers, body);
+    }
+
 }

@@ -13,6 +13,6 @@ import { ValidatedRequest } from './validated-request';
 
 module.exports = ValidatedRequest;
 module.exports.ValidatedRequest = ValidatedRequest;
-module.exports.get = ValidatedRequest;
-module.exports.post = ValidatedRequest;
-module.exports.put = ValidatedRequest;
+module.exports.get = ValidatedRequest.staticGet;
+module.exports.post = ValidatedRequest.staticPost;
+module.exports.put = ValidatedRequest.staticPut;
