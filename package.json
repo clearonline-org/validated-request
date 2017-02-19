@@ -1,6 +1,6 @@
 {
   "name": "validated-request",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Prevent your system from sending request with incorect parameters",
   "main": "./lib/index.js",
   "scripts": {
@@ -13,9 +13,9 @@
   "keywords": [],
   "author": "Marcellin<nmarcellin2@gmail.com>",
   "license": "MIT",
-  "repository" : { 
-    "type" : "git",
-    "url" : "https://github.com/clearonline-org/validated-request.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clearonline-org/validated-request.git"
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
