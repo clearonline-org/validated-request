@@ -1,6 +1,6 @@
 {
   "name": "validated-request",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Prevent your system from sending request with incorect parameters",
   "main": "./lib/index.js",
   "scripts": {
