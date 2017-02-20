@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "@types/node": "^7.0.5",
-    "es6-promise": "^4.0.5",
+    "@types/es6-promise": "0.0.32",
+    "@types/request": "0.0.39",
     "jest-cli": "^18.1.0",
     "mock-http-server": "^0.1.0",
     "ts-jest": "^18.0.3",
@@ -27,8 +28,6 @@
     "uglifyjs-folder": "^1.1.0"
   },
   "dependencies": {
-    "@types/es6-promise": "0.0.32",
-    "@types/request": "0.0.39",
     "es6-promise": "^4.0.5",
     "request": "^2.79.0"
   },
