@@ -42,7 +42,7 @@ var ValidatedPost = (function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, post_1.postRequest(url, { headers: headers, body: body })];
+                    case 0: return [4 /*yield*/, post_1.postRequest(url, { headers: headers, body: body, json: true })];
                     case 1: 
                     // @TODO validate the headers against the protocol
                     return [2 /*return*/, _a.sent()];

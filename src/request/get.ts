@@ -7,10 +7,11 @@ Promise<{ error: any, response: RequestResponse, body: any }> {
         return get(
         url, options,
         (error: any, response: RequestResponse, body: any) => {
-            if(!error) {
-                return resolve({ body, response });
+            if(error || response.statusCode !== 200) {
+                error = error || body; // some api's send error message in the body
+                return reject({ error, response })
             }
-            return reject({ error, response })
+            return resolve({ body, response });
         });
     });
 

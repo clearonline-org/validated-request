@@ -6,6 +6,6 @@ export class ValidatedPost {
     }
     public async post(url: string, headers: { [key: string]: string }, body: JSON): Promise<{ response: any, body?: any, error?: any }> {
         // @TODO validate the headers against the protocol
-        return await postRequest(url, { headers, body });
+        return await postRequest(url, { headers, body, json: true });
     }
 }
